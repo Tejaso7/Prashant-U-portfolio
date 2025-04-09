@@ -1,1 +1,731 @@
-why are you gay ..... come after 10 mint you will see your portfoilo
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prashant Upadhyay – Deep Learning Engineer | NLP & LLM Specialist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'IBM Plex Mono', monospace;
+            background-color: #0a0a0f;
+            color: #e2e8f0;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .tech-icon {
+            transition: all 0.3s ease;
+            background: rgba(30, 58, 138, 0.2);
+            backdrop-filter: blur(10px);
+        }
+        .tech-icon:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 15px rgba(45, 212, 191, 0.5);
+        }
+        .project-card {
+            background: linear-gradient(145deg, #111827 0%, #1e1b4b 100%);
+            border: 1px solid rgba(45, 212, 191, 0.1);
+            transition: all 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(45, 212, 191, 0.2);
+            border-color: rgba(45, 212, 191, 0.3);
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #2DD4BF 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .console-effect {
+            position: relative;
+        }
+        .console-effect::after {
+            content: '|';
+            animation: blink 1s infinite;
+            position: absolute;
+            right: -10px;
+        }
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+        .glow-effect {
+            box-shadow: 0 0 15px rgba(45, 212, 191, 0.5);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background: linear-gradient(90deg, #2DD4BF 0%, #3b82f6 100%);
+            transition: width 0.3s;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .terminal-window {
+            background: rgba(15, 23, 42, 0.7);
+            border: 1px solid rgba(45, 212, 191, 0.2);
+            border-radius: 8px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+        .terminal-header {
+            background: rgba(30, 58, 138, 0.3);
+            border-bottom: 1px solid rgba(45, 212, 191, 0.2);
+        }
+        .terminal-body {
+            background: rgba(15, 23, 42, 0.5);
+        }
+        .command-line {
+            color: #2DD4BF;
+        }
+        .command-output {
+            color: #e2e8f0;
+        }
+        .timeline-item {
+            position: relative;
+            padding-left: 2rem;
+            border-left: 2px solid rgba(45, 212, 191, 0.3);
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -9px;
+            top: 0;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #2DD4BF;
+            border: 3px solid #0a0a0f;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200">
+    <!-- Navigation -->
+    <nav class="bg-gray-900/80 backdrop-blur-md fixed w-full z-10 border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold gradient-text">Prashant Upadhyay</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="nav-link text-gray-300 hover:text-white transition">About</a>
+                    <a href="#projects" class="nav-link text-gray-300 hover:text-white transition">Projects</a>
+                    <a href="#experience" class="nav-link text-gray-300 hover:text-white transition">Experience</a>
+                    <a href="#contact" class="nav-link text-gray-300 hover:text-white transition">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-toggle" class="text-gray-300 hover:text-white">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-900/95 backdrop-blur-md pb-4 px-4 border-b border-gray-800">
+            <a href="#about" class="block py-2 text-gray-300 hover:text-white transition">About</a>
+            <a href="#projects" class="block py-2 text-gray-300 hover:text-white transition">Projects</a>
+            <a href="#experience" class="block py-2 text-gray-300 hover:text-white transition">Experience</a>
+            <a href="#contact" class="block py-2 text-gray-300 hover:text-white transition">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-br from-gray-900 via-blue-900/30 to-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex items-center justify-between">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <div class="terminal-window mb-8">
+                        <div class="terminal-header px-4 py-2 flex items-center">
+                            <div class="flex space-x-2 mr-4">
+                                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                            </div>
+                            <div class="text-sm text-gray-400">terminal -- prashant-upadhyay</div>
+                        </div>
+                        <div class="terminal-body p-4 font-mono">
+                            <p class="command-line">$ whoami</p>
+                            <p class="command-output mb-4">Prashant Upadhyay - Deep Learning Engineer</p>
+                            <p class="command-line">$ skills --show</p>
+                            <p class="command-output mb-4">LLMs | NLP | Computer Vision | TensorFlow | PyTorch</p>
+                            <p class="command-line">$ contact --now</p>
+                            <p class="command-output animate-pulse">Initializing AI model pipeline...</p>
+                        </div>
+                    </div>
+                    
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4 gradient-text console-effect">Building Intelligent AI Systems</h1>
+                    <p class="text-xl mb-8 text-gray-400">Large Language Models | Computer Vision | AI Deployment</p>
+                    <div class="flex space-x-4">
+                        <a href="#projects" class="bg-gradient-to-r from-blue-600 to-teal-500 text-white px-6 py-3 rounded-lg font-medium hover:opacity-90 transition glow-effect">
+                            <i class="fas fa-brain mr-2"></i> View Projects
+                        </a>
+                        <a href="#contact" class="border-2 border-teal-400 text-teal-400 px-6 py-3 rounded-lg font-medium hover:bg-teal-400/10 transition">
+                            <i class="fas fa-terminal mr-2"></i> Contact Me
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative">
+                        <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-teal-400/20 glow-effect">
+                            <!-- Placeholder for profile image with tech overlay -->
+                            <div class="w-full h-full bg-gray-800 flex items-center justify-center relative">
+                                <div class="absolute inset-0 bg-gradient-to-br from-blue-900/30 to-teal-500/20"></div>
+                                <i class="fas fa-robot text-6xl text-teal-400 z-10"></i>
+                            </div>
+                        </div>
+                        <div class="absolute -bottom-5 -right-5 bg-gray-800 p-3 rounded-lg border border-gray-700 shadow-lg">
+                            <div class="flex items-center">
+                                <div class="bg-purple-600 p-2 rounded-full mr-2">
+                                    <i class="fas fa-microchip text-white text-sm"></i>
+                                </div>
+                                <span class="text-sm font-mono">AI Specialist</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 gradient-text">About Me</h2>
+            <div class="md:flex items-center">
+                <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center">
+                    <div class="relative">
+                        <div class="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-teal-400/20 glow-effect">
+                            <div class="w-full h-full bg-gray-800 flex items-center justify-center relative">
+                                <div class="absolute inset-0 bg-gradient-to-br from-blue-900/30 to-teal-500/20"></div>
+                                <i class="fas fa-robot text-5xl text-teal-400 z-10"></i>
+                            </div>
+                        </div>
+                        <div class="absolute -bottom-3 -left-3 bg-gray-800 p-2 rounded-lg border border-gray-700 shadow-lg">
+                            <div class="flex items-center">
+                                <div class="bg-orange-500 p-1 rounded-full mr-2">
+                                    <i class="fas fa-eye text-white text-xs"></i>
+                                </div>
+                                <span class="text-xs font-mono">YOLOv8</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-2/3 md:pl-12">
+                    <div class="terminal-window mb-8">
+                        <div class="terminal-header px-4 py-2 flex items-center">
+                            <div class="flex space-x-2 mr-4">
+                                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                            </div>
+                            <div class="text-sm text-gray-400">bio.txt</div>
+                        </div>
+                        <div class="terminal-body p-6">
+                            <p class="mb-6">Hi, I'm <span class="font-bold text-teal-400">Prashant Upadhyay</span>! An experienced Deep Learning Engineer specializing in NLP, Large Language Models (LLMs), and Computer Vision. I excel in developing and deploying AI solutions using TensorFlow, PyTorch, and advanced LLMs like GPT-4 and Llama 2.</p>
+                            <p class="font-mono text-sm text-gray-400">$ cat skills.txt</p>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold mb-4 text-teal-400">Core Competencies</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <div class="tech-icon p-4 rounded-lg border border-gray-800">
+                            <div class="text-teal-400 mb-2">
+                                <i class="fas fa-language text-2xl"></i>
+                            </div>
+                            <h4 class="font-medium">NLP & LLMs</h4>
+                            <p class="text-sm text-gray-400">GPT-4, Llama 2, BERT</p>
+                        </div>
+                        <div class="tech-icon p-4 rounded-lg border border-gray-800">
+                            <div class="text-teal-400 mb-2">
+                                <i class="fas fa-eye text-2xl"></i>
+                            </div>
+                            <h4 class="font-medium">Computer Vision</h4>
+                            <p class="text-sm text-gray-400">YOLOv8, ResNet50</p>
+                        </div>
+                        <div class="tech-icon p-4 rounded-lg border border-gray-800">
+                            <div class="text-teal-400 mb-2">
+                                <i class="fas fa-network-wired text-2xl"></i>
+                            </div>
+                            <h4 class="font-medium">Deep Learning</h4>
+                            <p class="text-sm text-gray-400">TensorFlow, PyTorch</p>
+                        </div>
+                        <div class="tech-icon p-4 rounded-lg border border-gray-800">
+                            <div class="text-teal-400 mb-2">
+                                <i class="fas fa-cloud text-2xl"></i>
+                            </div>
+                            <h4 class="font-medium">Deployment</h4>
+                            <p class="text-sm text-gray-400">AWS, Flask, REST APIs</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tech Stack -->
+            <div class="mt-16">
+                <h3 class="text-xl font-bold mb-6 text-center text-teal-400">Tech Stack</h3>
+                <div class="terminal-window">
+                    <div class="terminal-header px-4 py-2 flex items-center">
+                        <div class="flex space-x-2 mr-4">
+                            <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                        </div>
+                        <div class="text-sm text-gray-400">tech-stack.sh</div>
+                    </div>
+                    <div class="terminal-body p-6">
+                        <div class="flex flex-wrap justify-center gap-4">
+                            <div class="tech-icon p-4 rounded-full border border-gray-800 w-16 h-16 flex items-center justify-center">
+                                <i class="fas fa-brain text-2xl text-purple-400"></i> <!-- AI -->
+                            </div>
+                            <div class="tech-icon p-4 rounded-full border border-gray-800 w-16 h-16 flex items-center justify-center">
+                                <i class="fab fa-python text-2xl text-blue-400"></i>
+                            </div>
+                            <div class="tech-icon p-4 rounded-full border border-gray-800 w-16 h-16 flex items-center justify-center">
+                                <i class="fas fa-project-diagram text-2xl text-red-400"></i> <!-- TensorFlow -->
+                            </div>
+                            <div class="tech-icon p-4 rounded-full border border-gray-800 w-16 h-16 flex items-center justify-center">
+                                <i class="fas fa-fire text-2xl text-orange-400"></i> <!-- PyTorch -->
+                            </div>
+                            <div class="tech-icon p-4 rounded-full border border-gray-800 w-16 h-16 flex items-center justify-center">
+                                <i class="fas fa-eye text-2xl text-green-400"></i> <!-- YOLO -->
+                            </div>
+                            <div class="tech-icon p-4 rounded-full border border-gray-800 w-16 h-16 flex items-center justify-center">
+                                <i class="fab fa-aws text-2xl text-orange-400"></i>
+                            </div>
+                            <div class="tech-icon p-4 rounded-full border border-gray-800 w-16 h-16 flex items-center justify-center">
+                                <i class="fas fa-flask text-2xl text-gray-300"></i> <!-- Flask -->
+                            </div>
+                            <div class="tech-icon p-4 rounded-full border border-gray-800 w-16 h-16 flex items-center justify-center">
+                                <i class="fas fa-database text-2xl text-blue-300"></i> <!-- Data -->
+                            </div>
+                            <div class="tech-icon p-4 rounded-full border border-gray-800 w-16 h-16 flex items-center justify-center">
+                                <i class="fab fa-git-alt text-2xl text-orange-500"></i>
+                            </div>
+                            <div class="tech-icon p-4 rounded-full border border-gray-800 w-16 h-16 flex items-center justify-center">
+                                <i class="fas fa-code text-2xl text-gray-300"></i> <!-- BERT -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 bg-gradient-to-br from-gray-900 via-blue-900/20 to-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 gradient-text">AI Projects</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card rounded-xl overflow-hidden">
+                    <div class="h-48 bg-gradient-to-r from-blue-900/80 to-blue-800/50 flex items-center justify-center relative">
+                        <div class="absolute inset-0 opacity-20" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/OpenAI_Logo.svg/1200px-OpenAI_Logo.svg.png'); background-size: 50%; background-position: center; background-repeat: no-repeat;"></div>
+                        <i class="fas fa-comments text-6xl text-blue-400 opacity-30 z-10"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-teal-400">RAG System with LLMs</h3>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-900/50 text-blue-300 text-xs px-3 py-1 rounded-full">GPT-4</span>
+                            <span class="bg-blue-900/50 text-blue-300 text-xs px-3 py-1 rounded-full">Llama 2</span>
+                            <span class="bg-blue-900/50 text-blue-300 text-xs px-3 py-1 rounded-full">Flask</span>
+                        </div>
+                        <p class="text-gray-400 mb-4">Developed Retrieval-Augmented Generation systems using advanced LLMs like GPT-4 and Llama 2, with Flask-based APIs for deployment.</p>
+                        <ul class="list-disc pl-5 text-gray-400 mb-4 space-y-1 text-sm">
+                            <li>Implemented real-time interaction systems</li>
+                            <li>Created POCs for AI Avatars</li>
+                            <li>Developed Voice-based RAG systems</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card rounded-xl overflow-hidden">
+                    <div class="h-48 bg-gradient-to-r from-purple-900/80 to-pink-800/50 flex items-center justify-center relative">
+                        <div class="absolute inset-0 opacity-20" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/YOLO_logo.png/640px-YOLO_logo.png'); background-size: 40%; background-position: center; background-repeat: no-repeat;"></div>
+                        <i class="fas fa-eye text-6xl text-purple-400 opacity-30 z-10"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-teal-400">Computer Vision Models</h3>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-900/50 text-blue-300 text-xs px-3 py-1 rounded-full">YOLOv8</span>
+                            <span class="bg-blue-900/50 text-blue-300 text-xs px-3 py-1 rounded-full">ResNet50</span>
+                            <span class="bg-blue-900/50 text-blue-300 text-xs px-3 py-1 rounded-full">PyTorch</span>
+                        </div>
+                        <p class="text-gray-400 mb-4">Designed and implemented complex deep learning models for computer vision tasks including object detection and image classification.</p>
+                        <ul class="list-disc pl-5 text-gray-400 mb-4 space-y-1 text-sm">
+                            <li>Specialized in YOLOv8 implementations</li>
+                            <li>Developed segmentation models</li>
+                            <li>Created pose-detection systems</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card rounded-xl overflow-hidden">
+                    <div class="h-48 bg-gradient-to-r from-teal-900/80 to-blue-800/50 flex items-center justify-center relative">
+                        <div class="absolute inset-0 opacity-20" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Scikit_learn_logo_small.svg/1200px-Scikit_learn_logo_small.svg.png'); background-size: 40%; background-position: center; background-repeat: no-repeat;"></div>
+                        <i class="fas fa-chart-line text-6xl text-teal-400 opacity-30 z-10"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-teal-400">Job Portal Enhancement</h3>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-900/50 text-blue-300 text-xs px-3 py-1 rounded-full">BERT</span>
+                            <span class="bg-blue-900/50 text-blue-300 text-xs px-3 py-1 rounded-full">NLP</span>
+                            <span class="bg-blue-900/50 text-blue-300 text-xs px-3 py-1 rounded-full">Python</span>
+                        </div>
+                        <p class="text-gray-400 mb-4">Enhanced a job portal using BERT (Bidirectional Encoder Representations from Transformers) for improved text understanding and matching.</p>
+                        <ul class="list-disc pl-5 text-gray-400 mb-4 space-y-1 text-sm">
+                            <li>Implemented transformer models</li>
+                            <li>Improved semantic search capabilities</li>
+                            <li>Optimized job matching algorithms</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="https://github.com/prashantupadhyay0" class="inline-flex items-center px-6 py-3 border border-teal-400 text-teal-400 rounded-lg hover:bg-teal-400/10 transition font-mono">
+                    <i class="fab fa-github mr-2"></i> git clone https://github.com/prashantupadhyay0
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 gradient-text">Work Experience</h2>
+            
+            <div class="terminal-window max-w-3xl mx-auto">
+                <div class="terminal-header px-4 py-2 flex items-center">
+                    <div class="flex space-x-2 mr-4">
+                        <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                    </div>
+                    <div class="text-sm text-gray-400">experience.log</div>
+                </div>
+                <div class="terminal-body p-6">
+                    <!-- Experience 1 -->
+                    <div class="timeline-item mb-8">
+                        <div class="mb-2">
+                            <h3 class="text-xl font-bold text-teal-400">Machine Learning Engineer</h3>
+                            <p class="text-gray-400">Iffort | Feb 2024 - Present</p>
+                        </div>
+                        <ul class="list-disc pl-5 space-y-2 text-gray-300">
+                            <li>Develop, deploy, and integrate AI solutions with focus on NLP and RAG systems powered by LLMs</li>
+                            <li>Led RAG implementations using GPT-4, GPT-4o, and Llama 2 for real-time interaction systems</li>
+                            <li>Created POCs for AI Avatars and Voice-based RAG systems</li>
+                            <li>Developed Flask-based APIs for seamless model deployment</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Experience 2 -->
+                    <div class="timeline-item mb-8">
+                        <div class="mb-2">
+                            <h3 class="text-xl font-bold text-teal-400">Software Engineer</h3>
+                            <p class="text-gray-400">Futureai Tech Pvt. Ltd. | Jan 2023 – Jan 2024</p>
+                        </div>
+                        <ul class="list-disc pl-5 space-y-2 text-gray-300">
+                            <li>Specialized in designing deep learning models for computer vision (YOLOv8, ResNet50)</li>
+                            <li>Implemented image classification, object detection, and segmentation models</li>
+                            <li>Proficient in TensorFlow, PyTorch, and other deep learning tools</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Experience 3 -->
+                    <div class="timeline-item">
+                        <div class="mb-2">
+                            <h3 class="text-xl font-bold text-teal-400">Junior Data Scientist</h3>
+                            <p class="text-gray-400">Zummit Infolabs | Nov 2022 – Mar 2023</p>
+                        </div>
+                        <ul class="list-disc pl-5 space-y-2 text-gray-300">
+                            <li>Enhanced job portal using BERT for text understanding</li>
+                            <li>Developed CNN models using TensorFlow/Keras</li>
+                            <li>Implemented NLP solutions for text classification</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Certifications & Education -->
+            <div class="mt-16">
+                <h3 class="text-xl font-bold mb-6 text-center text-teal-400">Education</h3>
+                
+                <div class="tech-icon p-6 rounded-lg border border-gray-800 max-w-md mx-auto">
+                    <div class="text-teal-400 mb-3 flex items-center">
+                        <i class="fas fa-graduation-cap text-3xl mr-3"></i>
+                        <div>
+                            <h4 class="font-bold">Bachelor of Technology</h4>
+                            <p class="text-gray-400">Computer Science Engineering with specialization in Mainframe technologies</p>
+                            <p class="text-sm text-gray-400 mt-1">University of Petroleum and Energy Studies, Dehradun</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gradient-to-br from-gray-900 via-blue-900/20 to-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 gradient-text">Get In Touch</h2>
+            
+            <div class="md:flex max-w-5xl mx-auto">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-8">
+                    <div class="terminal-window h-full">
+                        <div class="terminal-header px-4 py-2 flex items-center">
+                            <div class="flex space-x-2 mr-4">
+                                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                            </div>
+                            <div class="text-sm text-gray-400">contact.sh</div>
+                        </div>
+                        <div class="terminal-body p-6 h-full flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-start mb-6">
+                                    <div class="text-teal-400 mr-4 mt-1">
+                                        <i class="fas fa-envelope text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium">Email</h4>
+                                        <a href="mailto:prashantupadhyay0@gmail.com" class="text-gray-400 hover:text-teal-400 transition font-mono break-all">prashantupadhyay0@gmail.com</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start mb-6">
+                                    <div class="text-teal-400 mr-4 mt-1">
+                                        <i class="fas fa-phone text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium">Phone</h4>
+                                        <a href="tel:+918954653528" class="text-gray-400 hover:text-teal-400 transition font-mono">+91 8954653528</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start mb-6">
+                                    <div class="text-teal-400 mr-4 mt-1">
+                                        <i class="fab fa-linkedin text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium">LinkedIn</h4>
+                                        <a href="https://www.linkedin.com/in/prashantupadhyay0/" target="_blank" class="text-gray-400 hover:text-teal-400 transition font-mono">linkedin.com/in/prashantupadhyay0</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="text-teal-400 mr-4 mt-1">
+                                        <i class="fab fa-github text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium">GitHub</h4>
+                                        <a href="https://github.com/prashantupadhyay0" target="_blank" class="text-gray-400 hover:text-teal-400 transition font-mono">github.com/prashantupadhyay0</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-8">
+                                <p class="text-gray-400 mb-2">Or connect via terminal:</p>
+                                <div class="bg-gray-800 p-3 rounded border border-gray-700 font-mono text-sm">
+                                    <p class="text-teal-400">$ ssh prashant@ai-engineer</p>
+                                    <p class="text-gray-300">Connecting to neural network...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <div class="terminal-window h-full">
+                        <div class="terminal-header px-4 py-2 flex items-center">
+                            <div class="flex space-x-2 mr-4">
+                                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                            </div>
+                            <div class="text-sm text-gray-400">send-message.py</div>
+                        </div>
+                        <div class="terminal-body p-6 h-full">
+                            <form id="contactForm" class="space-y-4">
+                                <div>
+                                    <label for="name" class="block text-sm font-medium text-gray-400 mb-1">Name</label>
+                                    <input type="text" id="name" name="name" class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 font-mono">
+                                </div>
+                                
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-gray-400 mb-1">Email</label>
+                                    <input type="email" id="email" name="email" class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 font-mono">
+                                </div>
+                                
+                                <div>
+                                    <label for="message" class="block text-sm font-medium text-gray-400 mb-1">Message</label>
+                                    <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 font-mono"></textarea>
+                                </div>
+                                
+                                <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-teal-500 text-white px-6 py-3 rounded-lg font-medium hover:opacity-90 transition glow-effect flex items-center justify-center">
+                                    <i class="fas fa-paper-plane mr-2"></i> Execute Send
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900/80 backdrop-blur-md py-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <p class="text-xl italic mb-4 text-teal-400 font-mono">"Building intelligent systems that understand and interact with the world."</p>
+                <div class="flex justify-center space-x-6 mb-6">
+                    <a href="https://www.linkedin.com/in/prashantupadhyay0/" target="_blank" class="text-gray-400 hover:text-teal-400 transition">
+                        <i class="fab fa-linkedin text-2xl"></i>
+                    </a>
+                    <a href="https://github.com/prashantupadhyay0" target="_blank" class="text-gray-400 hover:text-teal-400 transition">
+                        <i class="fab fa-github text-2xl"></i>
+                    </a>
+                    <a href="mailto:prashantupadhyay0@gmail.com" class="text-gray-400 hover:text-teal-400 transition">
+                        <i class="fas fa-envelope text-2xl"></i>
+                    </a>
+                </div>
+                <p class="text-sm text-gray-500 font-mono">© 2024 Prashant Upadhyay. Neural networks fully operational.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+
+        // Form submission with terminal-like effect
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            // Create terminal output
+            const form = this;
+            const terminalBody = form.closest('.terminal-body');
+            
+            // Clear form
+            form.classList.add('hidden');
+            
+            // Show processing message
+            const processingMsg = document.createElement('div');
+            processingMsg.innerHTML = `
+                <p class="text-teal-400 mb-2">$ ./send_message.py --name="${name}" --email="${email}"</p>
+                <p class="text-gray-300 mb-4">Processing message with AI model...</p>
+                <div class="flex space-x-2 mb-4">
+                    <div class="w-3 h-3 rounded-full bg-teal-500 animate-pulse"></div>
+                    <div class="w-3 h-3 rounded-full bg-teal-500 animate-pulse delay-100"></div>
+                    <div class="w-3 h-3 rounded-full bg-teal-500 animate-pulse delay-200"></div>
+                </div>
+            `;
+            terminalBody.appendChild(processingMsg);
+            
+            // Simulate processing
+            setTimeout(() => {
+                processingMsg.innerHTML += `
+                    <p class="text-green-400 mb-4">✓ Message successfully delivered!</p>
+                    <p class="text-gray-400">Prashant will respond soon. You can also connect directly via:</p>
+                    <p class="text-teal-400 mt-2">$ linkedin --open --profile=prashantupadhyay0</p>
+                `;
+                
+                // Reset form after delay
+                setTimeout(() => {
+                    form.reset();
+                    form.classList.remove('hidden');
+                    processingMsg.remove();
+                }, 5000);
+            }, 2000);
+        });
+
+        // Console typing effect for hero section
+        const consoleElement = document.querySelector('.console-effect');
+        const phrases = [
+            "Building Intelligent AI Systems",
+            "Developing LLM Solutions",
+            "Implementing Computer Vision",
+            "Deploying Neural Networks"
+        ];
+        let currentPhrase = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let isEnd = false;
+
+        function type() {
+            const fullTxt = phrases[currentPhrase];
+            
+            if (isDeleting) {
+                consoleElement.textContent = fullTxt.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                consoleElement.textContent = fullTxt.substring(0, charIndex + 1);
+                charIndex++;
+            }
+            
+            if (!isDeleting && charIndex === fullTxt.length) {
+                isEnd = true;
+                setTimeout(() => {
+                    isDeleting = true;
+                }, 2000);
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                currentPhrase = (currentPhrase + 1) % phrases.length;
+            }
+            
+            const speedUp = Math.random() * (100 - 50) + 50;
+            const normalSpeed = Math.random() * (300 - 200) + 200;
+            const time = isEnd ? 2000 : isDeleting ? speedUp : normalSpeed;
+            
+            setTimeout(type, time);
+        }
+
+        // Start typing effect after page loads
+        setTimeout(type, 1000);
+    </script>
+</body>
+</html>
